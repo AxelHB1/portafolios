@@ -3074,6 +3074,85 @@ input, select, textarea {
 				opacity: 1.0;
 			}
 
+/* Sobreescribir estilos de Lightbox2 para que parezca Poptrox */
+.lb-outerContainer {
+  background: #fff !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3) !important;
+  max-width: 90% !important;
+  animation: poptroxFadeIn 0.3s ease-out;
+}
+
+@keyframes poptroxFadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.lb-container {
+  padding: 0 !important;
+}
+
+.lb-image {
+  border: none !important;
+  border-radius: 4px 4px 0 0 !important;
+}
+
+.lb-nav a.lb-next,
+.lb-nav a.lb-prev {
+  opacity: 0.7 !important;
+  transition: opacity 0.2s !important;
+}
+
+.lb-nav a.lb-next:hover,
+.lb-nav a.lb-prev:hover {
+  opacity: 1 !important;
+}
+
+
+
+.lb-data .lb-caption {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+}
+
+.lb-close {
+  background: none !important;
+  color: #333 !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  opacity: 0.7 !important;
+  right: 10px !important;
+  top: 10px !important;
+  transition: opacity 0.2s !important;
+}
+
+.lb-close:hover {
+  opacity: 1 !important;
+}
+
+/* Efecto hover para las miniaturas */
+.image.fit.thumb {
+  position: relative;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.image.fit.thumb:hover {
+  transform: scale(1.03);
+}
+
+.image.fit.thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
 /* Touch */
 
 	body.is-touch .image.thumb:before {

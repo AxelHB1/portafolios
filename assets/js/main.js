@@ -94,24 +94,46 @@
 			}
 
 	// Main Sections: Two.
+/*
+  $window.on('load', function() {
+    $('#two').poptrox({
+        caption: function($a) {
+            return $a.attr('data-title') || $a.closest('.work-item').find('h3').text();
+        },
+        overlayColor: '#2c2c2c',
+        overlayOpacity: 0.85,
+        popupCloserText: '',
+        popupLoaderText: '',
+        selector: '.work-item a.image',
+        usePopupCaption: true,
+        usePopupDefaultStyling: false,
+        usePopupEasyClose: false,
+        usePopupNav: true,
+        windowMargin: (breakpoints.active('<=small') ? 0 : 50),
+        getGroupId: function($a) {
+            return $a.attr('data-group');
+        },
+        cyclic: false, // Esto evita que vuelva al inicio después de la última imagen
+        onPopupOpen: function() {
+            var currentGroup = $('.poptrox-popup .current').attr('data-group');
+            var $groupItems = $('[data-group="' + currentGroup + '"]');
+            var currentIndex = $groupItems.index($('.poptrox-popup .current'));
 
-		// Lightbox gallery.
-			$window.on('load', function() {
+            // Oculta flechas cuando corresponda
+            $('.poptrox-popup .nav-next').toggle(currentIndex < $groupItems.length - 1);
+            $('.poptrox-popup .nav-previous').toggle(currentIndex > 0);
+        },
+        onChange: function($item) {
+            var currentGroup = $item.attr('data-group');
+            var $groupItems = $('[data-group="' + currentGroup + '"]');
+            var currentIndex = $groupItems.index($item);
 
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
-			});
-
+            // Oculta flechas cuando corresponda
+            $('.poptrox-popup .nav-next').toggle(currentIndex < $groupItems.length - 1);
+            $('.poptrox-popup .nav-previous').toggle(currentIndex > 0);
+        }
+    });
+});
+*/
 })(jQuery);
+
